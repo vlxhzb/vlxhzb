@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/home/laux/Projekte/git/hzb-bii-ansible/ansible/vars/zone_data'
+let g:netrw_dirhist_4='/home/laux/Dokumente/Tabellen/Schichtplan'
+let g:netrw_dirhist_3='/srv/www/www-alarme/etc'
+let g:netrw_dirhist_2='/srv/www/www-alarme/etc/apache2.d'
+let g:netrw_dirhist_1='/srv/www/www-ssh/htdocs'

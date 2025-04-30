@@ -1,0 +1,728 @@
+
+# 2016-07-20 11:08:18.423963
++select * from inventory.v_device_values where where device_key in (5172, 5179)
++      and variable in ( 'readback_fact');
+
+# 2016-07-20 11:08:35.725333
++select * from inventory.v_device_values where device_key in (5172, 5179)
++      and variable in ( 'readback_fact');
+
+# 2016-07-20 11:08:46.061753
++select * from inventory.v_device_values where device_key in (5172, 5179)
++      and value_variable in ( 'readback_fact');
+
+# 2016-07-20 11:09:34.655995
++select device_value_key, value_name, device_key, value_default from inventory.v_device_values where device_key in (5172, 5179)
++      and value_variable in ( 'readback_fact');
+
+# 2016-07-20 11:11:19.610454
++update inventory.tbl_device_value set value='1.0' where device_key in (5172, 5179) and value_variable in ( 'readback_fact');
++
+
+# 2016-07-20 11:11:30.875202
++update inventory.tbl_device_value set value='1.0' where device_key in (5172, 5179) and variable in ( 'readback_fact');
++
+
+# 2016-07-20 11:12:30.215686
++select device_value_key, value_name, device_key, value_default from inventory.v_device_values where device_key in (5172, 5179)
++      and value_variable in ( 'readback_fact');
+
+# 2016-07-28 12:59:54.059282
++select * from device.v_lattice_erl;
+
+# 2016-07-28 13:01:12.126835
++select * from inventory.v_devices where subfamily = 'MARKER' and facility = 'F';
+
+# 2016-07-28 13:01:48.559887
++select * from inventory.v_devices where subfamily = 'MARKER' and facility = 'F' order by device_key;
+
+# 2016-07-28 13:02:22.786129
++select * from inventory.v_devices where subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:05:33.328256
++select * from inventory.v_devices as d join location.tbl_lattice_postion p on d.name_key=p.name_key where d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:06:30.405211
++select * from location.tbl_lattice_position;
+
+# 2016-07-28 13:06:53.826404
++select * from inventory.v_devices as d join location.tbl_lattice_postion as p on d.name_key=p.name_key where d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:07:15.226336
++select * from inventory.v_devices as d join location.tbl_lattice_position as p on d.name_key=p.name_key where d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:09:04.574900
++select facility_name, device_name, name, X, Y Z, THETA, L, PHI, W, name_key from inventory.v_devices as d join location.tbl_lattice_postion as p on d.name_key=p.name_key where d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:09:36.840483
++select facility_name, device_name, name, X, Y Z, THETA, L, PHI, W, name_key from inventory.v_devices as d, location.tbl_lattice_postion as p where d.name_key=p.name_key and d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:13:57.743659
++select facility_name, device_name, name, "X", "Y", "Z", "THETA", "L", "PHI", "W", d.name_key 
++from inventory.v_devices as d, location.tbl_lattice_position as p
++where d.name_key=p.name_key and d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:15:36.657037
++select name, "X", "Y", "Z", "THETA", "L", "PHI", "W", d.name_key 
++from inventory.v_devices as d, location.tbl_lattice_position as p
++where d.name_key=p.name_key and d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-07-28 13:16:21.042068
++select name, "X", "Y", "Z", "THETA", d.name_key 
++from inventory.v_devices as d, location.tbl_lattice_position as p
++where d.name_key=p.name_key and d.subfamily = 'MARKER' and facility = 'F' order by device_name;
+
+# 2016-08-25 22:21:05.517125
++select * from device.v_terminal_servers;
+
+# 2017-06-01 16:43:36.114838
++select * from location.tbl_facility;
+
+# 2017-06-01 16:44:38.617700
++select * from location.tbl_name_domain;
+
+# 2017-06-01 16:44:55.962787
++select * from inventory.tbl_name_domain;
+
+# 2017-06-01 16:45:30.121921
++\q
+
+# 2017-06-01 18:03:43.982638
++SELECT * FROM inventory.v_device_iocs;
++
+
+# 2017-06-01 18:04:02.912855
++\q
+
+# 2017-06-02 15:12:24.533036
++SELECT * FROM information_schema.sql_packages;
+
+# 2017-06-02 15:14:30.155114
++SELECT * FROM pg_catalog.pg_stat_user_functions;
+
+# 2017-06-02 15:15:21.773274
++SELECT inventory.parse_name('BPR') FROM dual;
+
+# 2017-06-02 15:15:50.346382
++SELECT inventory.parse_name('BPR') FROM DUA
+
+# 2017-06-02 15:15:53.967930
++SELECT inventory.parse_name('BPR') FROM DUAL;
+
+# 2017-06-06 13:44:37.664060
++select regexp_matches('Q3P4S3RP', '[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?');
+
+# 2017-06-06 13:46:37.280036
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', '');
+
+# 2017-06-06 13:48:23.991764
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', 't');
+
+# 2017-06-06 13:48:38.335301
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', 'x');
+
+# 2017-06-06 13:48:48.342567
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', 'q');
+
+# 2017-06-06 13:48:59.759231
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', 'p');
+
+# 2017-06-06 13:49:12.031122
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', 'cp');
+
+# 2017-06-06 13:49:15.248275
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', 'c');
+
+# 2017-06-06 13:49:26.599328
++select regexp_matches('Q3P4S3RP', E'[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?', 'w');
+
+# 2017-06-06 13:50:06.706899
++select regexp_matches('Q3P4S3RP', E'^[A-Z]+([0-9]+(-[0-9]+)?)?[BCFGHIKLMNOPQRSTVWYZ][0-9]*[BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?$');
+
+# 2017-06-06 13:50:58.396649
++select regexp_matches('Q3P4S3RP', E'^[A-Z]+([0-9]+(-[0-9]+)?)?');
+
+# 2017-06-06 13:51:16.980166
++select regexp_matches('Q3P4S3RP', E'^[A-Z]+');
+
+# 2017-06-06 13:52:21.700309
++select regexp_matches('Q3P4S3RP', E'^[A-Z]+([0-9]+(-[0-9]+)?)?');
+
+# 2017-06-06 13:52:33.299913
++select regexp_matches('Q3P4S3RP', E'^[A-Z]+([0-9]+(-[0-9]+)?)?.*');
+
+# 2017-06-06 13:52:58.195978
++select regexp_matches('Q3P4S3RP', E'^([A-Z]+)([0-9]+(-[0-9]+)?)?.*');
+
+# 2017-06-06 13:53:39.372775
++select regexp_matches('Q3P4S3RP', E'^([A-Z]+)([0-9]+(-[0-9]+)?)?([BCFGHIKLMNOPQRSTVWYZ])([0-9]*)([BCDEGKLMSTUX][0-9]*[ABCDEGHILMRSTV][FP]?)$');
+
+# 2017-06-06 13:54:30.652509
++select regexp_matches('Q3P4S3RP', E'^([A-Z]+)([0-9]+(-[0-9]+)?)?([BCFGHIKLMNOPQRSTVWYZ])([0-9]*)(([BCDEGKLMSTUX][0-9]*)([ABCDEGHILMRSTV])([FP]?))$');
+
+# 2017-06-06 13:57:00.602059
++select parse_name('Q3P4S3RP');
+
+# 2017-06-06 13:57:14.505832
++select inventory.parse_name('Q3P4S3RP');
+
+# 2017-06-06 15:35:00.249928
++select * from inventory.tbl_name_suggestion order by part_name;
+
+# 2017-06-06 15:36:07.692239
++select part_name, description from inventory.tbl_name_suggestion order by part_name;
+
+# 2017-06-06 15:37:55.085373
++select distinct part_name where part_name not in (select part_name from inventory.tbl_name_suggestion) order by part_name;
+
+# 2017-06-06 15:38:12.101744
++select distinct part_name from inventory.tbl_name where part_name not in (select part_name from inventory.tbl_name_suggestion) order by part_name;
+
+# 2017-06-06 16:20:51.698783
++select * from inventory.v_names where member = 'VMC2';
+
+# 2017-06-06 16:22:40.193048
++update inventory.tbl_name set part_name='VMC', part_index='2' where name_key=6362;
+
+# 2017-06-06 17:42:38.681134
++select distinct part_name where part_name not in (select part_name from inventory.tbl_name_suggestion) order by part_name;
+
+# 2017-06-06 17:42:44.379513
++select part_name, description from inventory.tbl_name_suggestion order by part_name;
+
+# 2018-02-06 10:52:39.482836
++select * FROM location.v_lattice_erl where subdomain='MAF' and subfamily='DIPOLE';
+
+# 2018-10-30 22:42:11.339602
++SELECT * FROM location.v_lattice_pathes ORDER BY config, loop, sortindex;
+
+# 2018-11-05 12:45:30.934478
++exit
+
+# 2018-11-06 16:16:28.584644
++SELECT * FROM location.v_lattice_pathes WHERE config='ERL-Ring' ORDER BY config, loop, sortindex;
+
+# 2019-07-30 18:19:14.801605
++\?
+
+# 2019-07-30 18:19:21.161992
++\dn
+
+# 2019-07-30 18:19:58.409882
++select * from experiments.v_devices;
+
+# 2019-07-30 18:21:05.070009
++ls
+
+# 2019-07-30 18:21:09.953545
++\q
+
+# 2019-08-12 15:17:36.116789
++SELECT v.device_value_key, v.name AS value_name, v.variable AS value_variable, v.value AS value_default
+
+# 2019-08-12 15:18:07.845124
++SELECT v.device_value_key, v.name AS value_name, v.variable AS value_variable, v.value AS value_default FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 15:18:56.456162
++SELECT v.device_value_key, v.name AS value_name, v.variable AS value_variable, cast(v.value AS NUMBER) AS value_default FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 15:58:38.507878
++SELECT v.device_value_key, v.name AS value_name, v.variable AS value_variable, CAST(v.value AS NUMERIC) AS value_default FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:01:54.351234
++SELECT v.device_value_key, v.name AS value_name, v.variable AS value_variable, TO_NUMBER(v.value, '999999999999D99999999999') AS value_default FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:04:31.321734
++SELECT *
++   FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:23:00.604010
++select to_number('1233,87', '99999D9999') from dual;
+
+# 2019-08-12 16:23:33.466722
++select to_number('1233,87', '99999D99999') from dual;
+
+# 2019-08-12 16:23:39.443621
++select to_number('1233,87', '999999999D99999') from dual;
+
+# 2019-08-12 16:24:21.547702
++select to_number('1233.87', '999999999D99999') from dual;
+
+# 2019-08-12 16:26:12.531096
++select * from inventory.v_device_value_conversion;
+
+# 2019-08-12 16:26:33.867012
++select * from inventory.tbl_device_value_conversion;
+
+# 2019-08-12 16:29:52.188040
++select c.device_value_key, NVL(v.value_default, 0) AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE call == 'TO_NUMBER';
+
+# 2019-08-12 16:30:26.950569
++select c.device_value_key, NVL(v.variable_value, 0) AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE call == 'TO_NUMBER';
+
+# 2019-08-12 16:31:05.084883
++select c.device_value_key, NVL(v.variable_value, 0) AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE c.call == 'TO_NUMBER';
+
+# 2019-08-12 16:34:59.510178
++select c.device_value_key, COALESCE(v.variable_value, 0) AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE c.call == 'TO_NUMBER';
+
+# 2019-08-12 16:35:38.825213
++select c.device_value_key, COALESCE(v.value, 0) AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE c.call == 'TO_NUMBER';
+
+# 2019-08-12 16:35:52.451847
++select c.device_value_key, COALESCE(v.value, '0') AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE c.call == 'TO_NUMBER';
+
+# 2019-08-12 16:36:03.404602
++select c.device_value_key, COALESCE(v.value, '0') AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE c.call = 'TO_NUMBER';
+
+# 2019-08-12 16:36:33.066358
++ls
+
+# 2019-08-12 16:37:04.861236
++select c.device_value_key, TO_NUMBER(COALESCE(v.value, '0')) AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE c.call = 'TO_NUMBER';
+
+# 2019-08-12 16:38:28.828786
++select c.device_value_key, COALESCE(REPLACE(v.value, ',', '.'), '0') AS value_default from inventory.tbl_device_value_conversion AS c JOIN inventory.tbl_device_value AS v ON c.device_value_key=v.device_value_key WHERE c.call = 'TO_NUMBER';
+
+# 2019-08-12 16:40:39.848580
++SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable,
++    to_number(REPLACE(
++        CASE
++            WHEN c."trim"::bpchar = 'y'::bpchar THEN btrim(v.value::text)::character varying
++            ELSE v.value
++        END::text, ',', '.'), '9999999999D9999999999'::text) AS value_default,
++    u.sign AS value_unit,
++    u.value_factor,
++    u.value_base,
++    c.call AS value_call,
++    c."trim" AS value_trim,
++    d.parent_name,
++    v.description,
++    v.status,
++    d.name_key,
++    d.device_key,
++    d.parent_key,
++    d.device_subfamily_key,
++    d.facility_key,
++    u.physical_unit_list_key
++   FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:43:12.743485
++SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable,
++    to_number(COALESCE(REPLACE(btrim(v.value),  ',', '.'), '0'), '9999999999D9999999999'::text) AS value_default,
++    u.sign AS value_unit,
++    u.value_factor,
++    u.value_base,
++    c.call AS value_call,
++    c."trim" AS value_trim,
++    d.parent_name,
++    v.description,
++    v.status,
++    d.name_key,
++    d.device_key,
++    d.parent_key,
++    d.device_subfamily_key,
++    d.facility_key,
++    u.physical_unit_list_key
++   FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:43:34.102511
++SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable,
++    to_number(COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0'), '9999999999D9999999999'::text) AS value_default,
++    u.sign AS value_unit,
++    u.value_factor,
++    u.value_base,
++    c.call AS value_call,
++    c."trim" AS value_trim,
++    d.parent_name,
++    v.description,
++    v.status,
++    d.name_key,
++    d.device_key,
++    d.parent_key,
++    d.device_subfamily_key,
++    d.facility_key,
++    u.physical_unit_list_key
++   FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:44:24.418830
++SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable,
++    COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0') AS value_default,
++    u.sign AS value_unit,
++    u.value_factor,
++    u.value_base,
++    c.call AS value_call,
++    c."trim" AS value_trim,
++    d.parent_name,
++    v.description,
++    v.status,
++    d.name_key,
++    d.device_key,
++    d.parent_key,
++    d.device_subfamily_key,
++    d.facility_key,
++    u.physical_unit_list_key
++   FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:46:01.254976
++SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable,
++    COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0') AS value_default,
++    u.sign AS value_unit,
++    u.value_factor,
++    u.value_base,
++    d.parent_name,
++    v.description,
++    v.status,
++    d.name_key,
++    d.device_key,
++    d.parent_key,
++    d.device_subfamily_key,
++    d.facility_key,
++    u.physical_unit_list_key
++   FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:46:52.382325
++CREATE OR REPLACE VIEW inventory.v_device_numbers AS
++ SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable,
+
+# 2019-08-12 16:47:06.989615
++CREATE OR REPLACE VIEW inventory.v_device_numbers AS
++ SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable, COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0') AS value_default, 
+
+# 2019-08-12 16:48:03.112003
++CREATE OR REPLACE VIEW inventory.v_device_numbers AS
++.............  SELECT v.device_value_key,
++.............     d.device_name,
++.............     d.name,
++.............     d.facility,
++.............     d.facility_name,
++.............     d.family,
++.............     d.subfamily,
++.............     v.name AS value_name,
++.............     v.variable AS value_variable,
++                  COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0') AS value_default,                                                                                                                                                                        
++.............     u.sign AS value_unit,                                                                                                                                                                                                                     
++.............     u.value_factor,                                                                                                                                                                                                                           
++.............     u.value_base,                                                                                                                                                                                                                             
++.............     c.call AS value_call,                                                                                                                                                                                                                     
++.............     c."trim" AS value_trim,                                                                                                                                                                                                                   
++.............     d.parent_name,                                                                                                                                                                                                                            
++.............     v.description,                                                                                                                                                                                                                            
++.............     v.status,                                                                                                                                                                                                                                 
++.............     d.name_key,                                                                                                                                                                                                                               
++.............     d.device_key,                                                                                                                                                                                                                             
++.............     d.parent_key,                                                                                                                                                                                                                             
++.............     d.device_subfamily_key,                                                                                                                                                                                                                   
++.............     d.facility_key,                                                                                                                                                                                                                           
++.............     u.physical_unit_list_key                                                                                                                                                                                                                  
++.............    FROM inventory.tbl_device_value v                                                                                                                                                                                                          
++.............      JOIN inventory.v_devices d ON v.device_key = d.device_key                                                                                                                                                                                
++.............      LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key                                                                                                                                             
++.............      LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key                                                                                                                                                          
++.............   WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:51:13.641821
++CREATE OR REPLACE VIEW inventory.v_device_numbers AS
++SELECT v.device_value_key,
++   d.device_name,
++   d.name,
++   d.facility,
++   d.facility_name,
++   d.family,
++   d.subfamily,
++   v.name AS value_name,
++   v.variable AS value_variable,
++   COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0') AS value_default,      
++   u.sign AS value_unit,    
++   u.value_factor,        
++   u.value_base,     
++   c.call AS value_call, 
++   c."trim" AS value_trim,    
++   d.parent_name,         
++   v.description,     
++   v.status,   
++   d.name_key,    
++   d.device_key,  
++   d.parent_key,     
++   d.device_subfamily_key,  
++   d.facility_key,   
++   u.physical_unit_list_key  
++   FROM inventory.tbl_device_value v   
++     JOIN inventory.v_devices d ON v.device_key = d.device_key 
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key   
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key    
++     WHERE upper(c.call::text) = 'TO_NUMBER'::text;
++
+
+# 2019-08-12 16:51:54.796239
++CREATE OR REPLACE VIEW inventory.v_device_numbers AS
++SELECT v.device_value_key,
++   d.device_name,
++   d.name,
++   d.facility,
++   d.facility_name,
++   d.family,
++   d.subfamily,
++   v.name AS value_name,
++   v.variable AS value_variable,
++   TO_NUMBER(COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0')) AS value_default,      
++   u.sign AS value_unit,    
++   u.value_factor,        
++   u.value_base,     
++   c.call AS value_call, 
++   c."trim" AS value_trim,    
++   d.parent_name,         
++   v.description,     
++   v.status,   
++   d.name_key,    
++   d.device_key,  
++   d.parent_key,     
++   d.device_subfamily_key,  
++   d.facility_key,   
++   u.physical_unit_list_key  
++   FROM inventory.tbl_device_value v   
++     JOIN inventory.v_devices d ON v.device_key = d.device_key 
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key   
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key    
++     WHERE upper(c.call::text) = 'TO_NUMBER'::text;
++
+
+# 2019-08-12 16:52:21.635731
++select * from inventory.v_device_numbers;
+
+# 2019-08-12 16:52:59.416579
++SELECT v.device_value_key,
++.............    d.device_name,
++.............    d.name,
++.............    d.facility,
++.............    d.facility_name,
++.............    d.family,
++.............    d.subfamily,
++.............    v.name AS value_name,
++.............    v.variable AS value_variable,
++.............    TO_NUMBER(COALESCE(REPLACE(TRIM(v.value),  ',', '.'), '0')) AS value_default,      
++.............    u.sign AS value_unit,    
++.............    u.value_factor,        
++.............    u.value_base,     
++.............    c.call AS value_call, 
++.............    c."trim" AS value_trim,    
++.............    d.parent_name,         
++.............    v.description,     
++.............    v.status,   
++.............    d.name_key,    
++.............    d.device_key,  
++.............    d.parent_key,     
++.............    d.device_subfamily_key,  
++.............    d.facility_key,   
++.............    u.physical_unit_list_key  
++.............    FROM inventory.tbl_device_value v   
++.............      JOIN inventory.v_devices d ON v.device_key = d.device_key 
++.............      LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key   
++.............      LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key    
++.............      WHERE upper(c.call::text) = 'TO_NUMBER'::text;
++
+
+# 2019-08-12 16:53:56.315415
++SELECT v.device_value_key,
++    d.device_name,
++    d.name,
++    d.facility,
++    d.facility_name,
++    d.family,
++    d.subfamily,
++    v.name AS value_name,
++    v.variable AS value_variable,
++    COALESCE(replace(btrim(v.value::text), ','::text, '.'::text), '0'::text) AS value_default,
++    u.sign AS value_unit,
++    u.value_factor,
++    u.value_base,
++    c.call AS value_call,
++    c."trim" AS value_trim,
++    d.parent_name,
++    v.description,
++    v.status,
++    d.name_key,
++    d.device_key,
++    d.parent_key,
++    d.device_subfamily_key,
++    d.facility_key,
++    u.physical_unit_list_key
++   FROM inventory.tbl_device_value v
++     JOIN inventory.v_devices d ON v.device_key = d.device_key
++     LEFT JOIN inventory.tbl_device_value_conversion c ON c.device_value_key = v.device_value_key
++     LEFT JOIN base.v_physical_units u ON u.physical_unit_list_key = v.unit_list_key
++  WHERE upper(c.call::text) = 'TO_NUMBER'::text;
+
+# 2019-08-12 16:56:34.261850
++delete from inventory.tbl_device_value_conversion where device_value_key in (26262,31551);
+
+# 2019-08-12 16:56:48.965336
++select * from inventory.v_device_numbers;
+
+# 2021-07-21 11:16:31.768847
++select * from pg_stat_activity;
+
+# 2021-07-21 11:17:40.276396
++select * from pg_stats;
+
+# 2021-07-21 11:31:03.523879
++\q
+
+# 2021-07-22 10:16:29.993000
++select * from device.v_devices where name like '?B';
+
+# 2021-07-22 10:16:38.688641
++select * from inventory.v_devices where name like '?B';
+
+# 2021-07-22 10:16:54.337031
++select * from inventory.v_devices where name like '_B';
+
+# 2021-07-22 10:17:04.353594
++select * from inventory.v_devices;
+
+# 2021-07-22 10:17:17.752690
++select * from inventory.v_devices where device_name like '_B';
+
+# 2021-07-22 10:17:23.169708
++select * from inventory.v_devices where device_name like '?B';
+
+# 2021-07-22 10:18:28.465770
++select * from inventory.v_names where facility = 'BII' and domain in ('B', 'I', 'T');
+
+# 2021-07-22 10:18:45.297598
++select * from inventory.v_names where domain in ('B', 'I', 'T');
+
+# 2021-07-22 10:19:10.113248
++select * from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T');
+
+# 2021-07-22 10:19:27.609460
++select name_key from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T');
+
+# 2021-07-22 10:19:57.088017
++select * from v_devices where name_key in (select name_key from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T'));
+
+# 2021-07-22 10:20:07.560650
++select * from inventory.v_devices where name_key in (select name_key from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T'));
+
+# 2021-07-22 10:20:25.095850
++select * from inventory.v_device_valuess where name_key in (select name_key from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T'));
+
+# 2021-07-22 10:20:33.017653
++select * from inventory.v_device_values where name_key in (select name_key from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T'));
+
+# 2021-07-22 10:23:07.176647
++\?
+
+# 2021-07-22 10:24:28.193527
++\o /tmp/devices_bit.dmp 
+
+# 2021-07-22 10:24:39.729602
++select * from inventory.v_device_values where name_key in (select name_key from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T'));
+
+# 2021-07-22 10:25:26.097189
++\q
+
+# 2021-07-22 10:31:25.216768
++select * from inventory.v_device_values where name_key in (select name_key from inventory.v_names where facility = ' ' and domain in ('B', 'I', 'T'));
+
+# 2022-01-17 13:04:58.129909
++select * from experiments.tbl_yellowboard;
+
+# 2022-01-17 13:05:47.394727
++select * from experiments.v_yellowpage_devices;

@@ -1,0 +1,86 @@
+unset LPATH LDOPTS
+
+rmpath () {
+  PATH=`echo $PATH | sed "s|:$1:|:|"`
+}
+foreach p (/opt/gnuplot/bin /opt/matlab/bin /opt/mgv/bin/X11 /opt/minicom/bin /opt/mm/bin /opt/mp/bin /opt/CC/bin)
+  rmpath $p
+end
+
+export LC_ALL=de_DE.UTF-8
+#export LC_MESSAGES=C
+export LANG=de_DE
+
+export CLASSPATH=/usr/share/java/junit-3.8.1.jar:$CLASSPATH
+  
+foreach d (/usr/{src,doc} /var/{arc,log})
+  eval $d:t=$d
+end
+if [[ -e /etc/auto.amnt ]]
+  then
+    foreach d (`grep -v '^#' /etc/auto.amnt | awk '{print $1}'`)
+      D=${d//-/}
+      eval $D=/amnt/$d
+    end
+  fi
+
+  
+foreach d (/usr/{src,doc} /var/{arc,log})
+  eval $d:t=$d
+end
+if [[ -e /etc/auto.amnt ]]
+  then
+    foreach d (`grep -v '^#' /etc/auto.amnt | awk '{print $1}'`)
+      D=${d//-/}
+      eval $D=/amnt/$d
+    end
+  fi
+
+alias dev='ssh -Y laux@bullseye.acc.bessy.de'
+alias repo='ssh -Y laux@repo.acc.bessy.de'
+alias dbnode1='ssh -Y dbadmin@dbnode1.trs.bessy.de'
+alias dbnode2='ssh -Y debadm@dbnode2.trs.bessy.de'
+alias dbnode3='ssh -Y debadm@dbnode3.trs.bessy.de'
+alias postgres='ssh -Y debadm@db1node1.csn32.bessy.de'
+alias pgdev='psql -h db1node1.csn32.bessy.de -p 5432 -U postgres -d devices_2015'
+alias pgroot='psql -h db1node1.csn32.bessy.de -p 5432 -U postgres '
+alias help='ssh -Y debadm@docnode3.csn32.bessy.de'
+alias wwwcsr='ssh -Y wwwadmin@wwwnode2.trs.bessy.de'
+alias indico='ssh -Y wwwadmin@indico.helmholtz-berlin.de'
+alias webopi='ssh -Y debadm@appnode6.csn32.bessy.de'
+alias wiki='ssh -Y debadm@docnode2.trs.bessy.de'
+alias wwwsplan='ssh wwwsplan@schichtplan.bessy.de'
+alias elk71='ssh -Y debadm@elk7node1.trs.bessy.de'
+alias elk72='ssh -Y debadm@elk7node2.trs.bessy.de'
+alias elk73='ssh -Y debadm@elk7node3.trs.bessy.de'
+alias elk74='ssh -Y debadm@elk7node4.trs.bessy.de'
+alias elk75='ssh -Y debadm@elk7node5.trs.bessy.de'
+alias opi-trac='ssh -Y debadm@opi-trac.bessy.de'
+alias ssh-keys='ssh -Y debadm@ssh-keys.csn32.bessy.de'
+
+export DEV_ANON="postgres://anonymous:bessyguest@db1node1.csn32.bessy.de:5432/devices_2015"
+export DEV_ADMIN="postgres://postgres@db1node1.csn32.bessy.de:5432/devices_2015"
+
+alias grep='grep --color=auto'
+alias fps='ps aux |grep '
+alias mdcd='mkdir $1; cd $1'
+alias taz='tar xzvf '
+alias taj='tar xjvf '
+alias tac='zar czvf '
+alias ports='netstat -tlnp'
+alias psmem='ps aux | sort -nk +4 | tail'
+alias 'ps?'='ps ax | grep '
+alias rdo='(cd /tmp && $1)'
+alias wwwcp='wget --random-wait -r -p -e robots=off -U mozilla http://$1'
+alias mnt='mount | column -t'
+alias biggest='du -s * | sort -n | tail'
+alias save='echo "!!" > last.sh'
+
+alias dulf='find . -type f -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {} '
+alias duld='find . -type d -print0 | xargs -0 du | sort -n | tail -10 | cut -f2 | xargs -I{} du -sh {} '
+
+alias mksshagent='eval `ssh-agent -s`'
+
+alias accLaunch='ssh -f -n $compress -Y ra-bii@ctl-srv2.csn31.bessy.de "launch $@"'
+alias mlsLaunch='ssh -f -n $compress -Y ra-bii@ctl-srv2.csn31.bessy.de "launch $@"'
+alias erlLaunch='ssh -f -n $compress -Y ra-bii@ctl-srv2.csn31.bessy.de "launch $@"'

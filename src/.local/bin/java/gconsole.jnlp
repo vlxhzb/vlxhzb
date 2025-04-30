@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: gconsole.jnlp,v 1.17.66.2 2011/07/12 22:06:09 wuy3 Exp $ Copyright (c) 2011 EMC Corporation
+
+	All rights reserved.  This is an UNPUBLISHED work, and
+	comprises proprietary and confidential information of EMC.
+	Unauthorized use, disclosure, and distribution are strictly
+	prohibited.  Use, duplication, or disclosure of the software
+	and documentation by the U.S. Government is subject to
+	restrictions set forth in a license agreement between the
+	Government and EMC or other written agreement specifying
+	the Government's rights to use the software and any applicable
+	FAR provisions, such as FAR 52.227-19.
+-->
+<!-- JNLP File for GConsole Application -->
+<!-- gstconfig bEgIn DO NOT ALTER THIS LINE -->
+<jnlp
+	spec="1.0+"
+	codebase="http://data.cs.bessy.de:9000"
+href="/gconsole.jnlp">	<resources>
+		<j2se version="1.6+" initial-heap-size="64M" max-heap-size="700M"/>
+		<jar href="/LGTOnmc/java/gwt.jar"/>
+		<jar href="/LGTOnmc/java/gst.jar"/>
+		<jar href="/LGTOnmc/java/gwt_res.jar"/>
+		<jar href="/LGTOnmc/java/comtsk.jar"/>
+		<jar href="/LGTOnmc/java/jconn2.jar"/>
+		<jar href="/LGTOnmc/java/jaxp.jar"/>
+		<jar href="/LGTOnmc/java/jcchart.jar"/>
+		<jar href="/LGTOnmc/java/jcfield.jar"/>
+		<jar href="/LGTOnmc/java/jcpagelayout.jar"/>
+		<jar href="/LGTOnmc/java/forms.jar"/>
+		<jar href="/LGTOnmc/java/looks.jar"/>
+		<jar href="/LGTOnmc/java/antlr.jar"/>
+		<jar href="/LGTOnmc/java/retrospect.jar"/>
+		<jar href="/LGTOnmc/java/gapps.jar"/>
+		<jar href="/LGTOnmc/java/gapps_res.jar"/>
+		<jar href="/LGTOnmc/java/y.jar"/>
+		<jar href="/LGTOnmc/java/ysvg.jar"/>
+		<jar href="/LGTOnmc/java/batik.jar"/>
+		<jar href="/LGTOnmc/java/jide-common.jar"/>
+		<jar href="/LGTOnmc/java/jide-components.jar"/>
+		<jar href="/LGTOnmc/java/jide-dock.jar"/>
+		<jar href="/LGTOnmc/java/ddomain.jar"/>
+		<jar href="/LGTOnmc/java/ddomain_res.jar"/>
+		<jar href="/LGTOnmc/java/nwadmin.jar"/>
+		<jar href="/LGTOnmc/java/nwadmin_res.jar"/>
+		<jar href="/LGTOnmc/java/gconsole.jar"/>
+		<jar href="/LGTOnmc/java/gconsole_res.jar"/>
+		<jar href="/LGTOnmc/java/nmc_help.jar"/>
+		<extension name="Language Pack" href="gconsole_fr.jnlp"/>
+		<extension name="Language Pack" href="gconsole_ja.jnlp"/>
+		<extension name="Language Pack" href="gconsole_ko.jnlp"/>
+		<extension name="Language Pack" href="gconsole_zh.jnlp"/>
+	    <extension name="Java Help" href="javahelp.jnlp"/>
+	</resources>
+	<application-desc main-class="COM.legato.gwt.framework.LMainWindow">
+		<argument>-g</argument>
+		<argument>data.cs.bessy.de</argument>
+		<argument>-p</argument>
+		<argument>gconsole</argument>
+		<argument>-i</argument>
+		<argument>false</argument>
+		<argument>-s</argument>
+		<argument>X_NO_SERVER_X</argument>
+		<argument>-t</argument>
+		<argument>X_NO_TASK_X</argument>
+		<argument>-h</argument>
+		<argument>9000</argument>
+		<argument>-n</argument>
+		<argument>9001</argument>
+		<argument>-b</argument>
+		<argument>2638</argument>
+		<argument>-d</argument>
+		<argument>0</argument>
+	</application-desc>
+	<information>
+		<title>NetWorker Management Console</title>
+		<vendor>EMC Corporation</vendor>
+		<homepage href = "http://www.emc.com"/>
+		<description>NetWorker Management Console</description>
+		<shortcut>
+		<menu submenu="EMC NetWorker"/>
+		<desktop/>
+		</shortcut>
+<!-- gstconfig  eNd  DO NOT ALTER THIS LINE -->
+		<icon href="console.gif"/>
+		<icon kind="splash" href="splash.jpg"/>
+		<offline-allowed/>
+	</information>
+	<security>
+		<all-permissions/>
+	</security>
+</jnlp>
+

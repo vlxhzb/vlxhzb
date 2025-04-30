@@ -1,0 +1,13 @@
+# Das ist Gits benutzerspezifische Konfigurationsdatei.
+[user]
+# Bitte passen Sie die folgenden Zeilen an und kommentieren Sie diese aus:
+#	name = Victoria Laux
+#	email = laux@drop.acc.bessy.de
+	name = vlxhzb
+	email = victoria.laux@helmholtz-berlin.de
+[credential "https://gitlab.helmholtz-berlin.de"]
+	username = gcm
+[push]
+	default = current
+[init]
+	defaultBranch = master

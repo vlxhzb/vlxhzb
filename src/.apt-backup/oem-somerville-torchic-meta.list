@@ -1,0 +1,4 @@
+deb http://dell.archive.canonical.com/ jammy somerville
+# deb-src http://dell.archive.canonical.com/ jammy somerville
+deb http://dell.archive.canonical.com/ jammy somerville-torchic
+# deb-src http://dell.archive.canonical.com/ jammy somerville-torchic

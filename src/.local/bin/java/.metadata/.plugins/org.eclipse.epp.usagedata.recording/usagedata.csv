@@ -1,0 +1,10 @@
+what,kind,bundleId,bundleVersion,description,time
+stopped,bundle,org.eclipse.uml2.search.ui,0.7.0.v200806130939,org.eclipse.uml2.search.ui,1228824044679
+stopped,bundle,org.eclipse.emf.search.genmodel,0.7.0.v200806130939,org.eclipse.emf.search.genmodel,1228824044679
+stopped,bundle,org.eclipse.emf.search.ecore.ui,0.7.0.v200806130939,org.eclipse.emf.search.ecore.ui,1228824044680
+stopped,bundle,org.eclipse.uml2.search,0.7.0.v200806130939,org.eclipse.uml2.search,1228824044680
+stopped,bundle,org.eclipse.emf.search.ecore,0.7.0.v200806130939,org.eclipse.emf.search.ecore,1228824044680
+stopped,bundle,org.eclipse.emf.search.common,0.7.0.v200806130939,org.eclipse.emf.search.common,1228824044680
+stopped,bundle,org.eclipse.emf.search.ui,0.7.0.v200806130939,org.eclipse.emf.search.ui,1228824044681
+stopped,bundle,org.eclipse.emf.search,0.7.0.v200806130939,org.eclipse.emf.search,1228824044681
+stopped,bundle,org.eclipse.dd.ipxact.checker.ui,0.9.0.v20080609,org.eclipse.dd.ipxact.checker.ui,1228824044682

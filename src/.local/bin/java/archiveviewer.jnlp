@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jnlp codebase='http://archiver.bessy.de/avint/bii' href='archiveviewer.jnlp'>
+<information>
+ <title>ArchiveViewer</title>
+ <vendor>Thomas Birke</vendor>
+ <description>ArchiveViewer, Powered by XAL</description>
+ <offline-allowed/>
+</information>
+<security>
+ <all-permissions/>
+</security>
+<resources>
+ <j2se version='1.8+'/>
+ <property name="jnlp.servers" value="Archiver Appliance BESSY | pbraw://archiver.bessy.de/retrieval/*Archiver Appliance BESSY FASTZC | pbraw://archiver.bessy.de/FASTZC/*Channel Archiver BESSY | http://archiver.bessy.de/cgi/ArchiveDataServer.cgi*old BESSY Channel Archiver data 2003-2010 | http://archiver.bessy.de/CARCH/cgi/ArchiveDataServer-2003-2010.cgi*old BESSY Channel Archiver data 2011-2013 | http://archiver.bessy.de/CARCH/cgi/ArchiveDataServer-2011-2013.cgi*old BESSY Channel Archiver data 2014-2015 | http://archiver.bessy.de/CARCH/cgi/ArchiveDataServer-2014-2015.cgi*old BESSY Channel Archiver data 2016 | http://archiver.bessy.de/CARCH/cgi/ArchiveDataServer-2016.cgi*old BESSY Channel Archiver data 2017-1 | http://archiver.bessy.de/CARCH/cgi/ArchiveDataServer-2017-1.cgi*old BESSY Channel Archiver data 2017-2 | http://archiver.bessy.de/CARCH/cgi/ArchiveDataServer-2017-2.cgi"/>
+ <jar href='archiveviewer.jar'/>
+</resources>
+<application-desc>
+ <argument>-u</argument>
+ <argument>pbraw://archiver.bessy.de/retrieval/</argument>
+</application-desc>
+</jnlp>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<jnlp codebase='http://archiver.bessy.de/avint/fastzc' href='archiveviewer.jnlp'>
+<information>
+ <title>ArchiveViewer</title>
+ <vendor>Thomas Birke</vendor>
+ <description>ArchiveViewer, Powered by XAL</description>
+ <offline-allowed/>
+</information>
+<security>
+ <all-permissions/>
+</security>
+<resources>
+ <j2se version='1.8+'/>
+ <property name="jnlp.servers" value="Archiver Appliance BESSY | pbraw://archiver.bessy.de/retrieval/*Archiver Appliance BESSY FASTZC | pbraw://archiver.bessy.de/FASTZC/*Archiver Appliance bERLinPro | pbraw://archiver.bessy.de/BPRO/retrieval/*Channel Archiver BESSY | http://archiver.bessy.de/cgi/ArchiveDataServer.cgi*Channel Archiver MLS | http://archiver.bessy.de/MLS/cgi/ArchiveDataServer.cgi*Channel Archiver HoBiCaT/SRFgun | http://archiver.bessy.de/cgi/ArchiveDataServer-HoBiCaT.cgi*Channel Archiver Gun-Test-Stand | http://archiver.bessy.de/TS/cgi/ArchiveDataServer.cgi*Channel Archiver bERLinPro | http://archiver.bessy.de/BPRO/cgi/ArchiveDataServer.cgi"/>
+ <jar href='archiveviewer.jar'/>
+</resources>
+<application-desc>
+ <argument>-u</argument>
+ <argument>pbraw://archiver.bessy.de/FASTZC/</argument>
+</application-desc>
+</jnlp>
