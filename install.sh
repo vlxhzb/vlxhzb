@@ -13,7 +13,8 @@ if ! id -u == "$USERNAME" >/dev/null 2>&1; then
 fi
 
 if test -d $HOMEDIR ; then
-    cp -Rn ./src/* ./src/.* $HOMEDIR >$HOMEDIR/install.log 2>&1
+    cp -RT $PWD/src $HOMEDIR >$HOMEDIR/install.log 2>&1
     chown -R $USERNAME:$USERNAME $HOMEDIR >>$HOMEDIR/install.log 2>&1
-    chmod -x $(find $HOMEDIR -type f)
+    chmod -R -x $HOMEDIR && chmod -R ug+X $HOMEDIR
+    chmod ug+x $HOMEDIR/.local/bin/*
 fi
